@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
-const PORT = process.env.port || 5000;
+const PORT =5000;
 app.use(express.static(__dirname + "/public"));
 const expressServer = app.listen(PORT);
 
