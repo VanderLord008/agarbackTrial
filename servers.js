@@ -6,7 +6,7 @@ const app = express();
 
 app.use(function(req, res, next) {
       // res.header("Access-Control-Allow-Origin", "*");
-      const allowedOrigins = ['http://localhost:3000', 'https://agarbacktrial.onrender.com', 'https://agarbacktrial.onrender.com','https://famous-platypus-3a5ce8.netlify.app'];
+      const allowedOrigins = ['http://localhost:5000', 'https://agarbacktrial.onrender.com','https://famous-platypus-3a5ce8.netlify.app'];
       const origin = req.headers.origin;
       if (allowedOrigins.includes(origin)) {
            res.setHeader('Access-Control-Allow-Origin', origin);
