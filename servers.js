@@ -20,7 +20,10 @@ const PORT =5000;
 app.use(express.static(__dirname + "/public"));
 const expressServer = app.listen(PORT);
 
-const socketio = require("socket.io");
-const io = socketio(expressServer);
+const io = require('socket.io')(expressServer, {
+  cors: {
+    origin: '*',
+  }
+});
 
 module.exports = { app, io };
